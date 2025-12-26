@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Search, ShoppingBag, Menu, RefreshCw, Package, MessageCircle } from 'lucide-react';
+import logo from '../assets/logo.png';
 
 const Navbar = () => {
   const [hoveredProduct, setHoveredProduct] = useState(false);
@@ -42,9 +43,8 @@ const Navbar = () => {
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           className="logo"
-          style={{ fontSize: '1.5rem', fontWeight: 700 }}
         >
-          vibita.
+          <img src={logo} alt="vibita." style={{ height: '32px' }} />
         </motion.div>
 
         <div className="desktop-menu" style={{ display: 'flex', gap: '2rem', color: 'var(--text-dim)' }}>
