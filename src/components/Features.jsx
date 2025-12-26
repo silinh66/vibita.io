@@ -172,7 +172,11 @@ const Features = () => {
                     </p>
                 </div>
 
-                <div className="features-grid">
+                <div className="features-grid" style={{
+                    display: 'grid',
+                    gridTemplateColumns: 'repeat(3, 1fr)',
+                    gap: '2rem'
+                }}>
                     {apps.map((app, i) => (
                         <FeatureCard key={i} {...app} />
                     ))}

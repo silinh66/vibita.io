@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Search, ShoppingBag, Menu, RefreshCw, Package, MessageCircle } from 'lucide-react';
+import { Search, ShoppingBag, Menu, RefreshCw, Package, MessageCircle, X } from 'lucide-react';
 import logo from '../assets/logo.png';
 
 const Navbar = () => {
   const [hoveredProduct, setHoveredProduct] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const products = [
     {
@@ -47,7 +48,8 @@ const Navbar = () => {
           <img src={logo} alt="vibita." style={{ height: '32px' }} />
         </motion.div>
 
-        <div className="desktop-menu" style={{ display: 'flex', gap: '2rem', color: 'var(--text-dim)' }}>
+        {/* Desktop Menu */}
+        <div className="desktop-menu desktop-only" style={{ display: 'flex', gap: '2rem', color: 'var(--text-dim)' }}>
           <div
             style={{ position: 'relative' }}
             onMouseEnter={() => setHoveredProduct(true)}
@@ -137,12 +139,59 @@ const Navbar = () => {
         </div>
 
         <div className="actions" style={{ display: 'flex', gap: '1.5rem', alignItems: 'center' }}>
-          <Search size={20} />
-          <ShoppingBag size={20} />
-          <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-            <Menu size={20} style={{ display: 'none' }} />
+          <Search size={20} className="desktop-only" />
+          <ShoppingBag size={20} className="desktop-only" />
+
+          <motion.div
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="mobile-only"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          >
+            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </motion.div>
         </div>
+
+        {/* Mobile Menu Overlay */}
+        <AnimatePresence>
+          {isMobileMenuOpen && (
+            <motion.div
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: '100vh' }}
+              exit={{ opacity: 0, height: 0 }}
+              style={{
+                position: 'fixed',
+                top: '70px',
+                left: 0,
+                right: 0,
+                background: '#0a0a0a',
+                padding: '2rem',
+                zIndex: 99,
+                overflowY: 'auto'
+              }}
+            >
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+                  <div style={{ color: '#888', fontSize: '0.8rem', textTransform: 'uppercase', letterSpacing: '1px' }}>Products</div>
+                  {products.map(p => (
+                    <a key={p.name} href="#" style={{ display: 'flex', gap: '1rem', alignItems: 'center', color: '#fff', textDecoration: 'none' }}>
+                      <div style={{ color: p.color }}><p.icon size={20} /></div>
+                      <span style={{ fontSize: '1.1rem' }}>{p.name}</span>
+                    </a>
+                  ))}
+                </div>
+
+                <div style={{ height: '1px', background: '#333' }} />
+
+                {['Solutions', 'Resources', 'Pricing'].map(item => (
+                  <a key={item} href="#" style={{ color: '#fff', fontSize: '1.2rem', textDecoration: 'none' }}>
+                    {item}
+                  </a>
+                ))}
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
     </nav>
   );
