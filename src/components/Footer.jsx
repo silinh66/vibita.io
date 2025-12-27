@@ -39,6 +39,7 @@ const Footer = () => {
                             <li>About</li>
                             <li>Careers</li>
                             <li>Blog</li>
+                            <li><a href="/privacy" style={{ color: 'inherit', textDecoration: 'none' }}>Privacy Policy</a></li>
                             <li>Contact</li>
                         </ul>
                     </div>
