@@ -8,7 +8,7 @@ const Privacy = () => {
             color: '#333',
             maxWidth: '800px',
             margin: '0 auto',
-            padding: '2rem',
+            padding: '120px 2rem 2rem 2rem',
             background: 'white'
         }}>
             <h1 style={{ color: '#111', marginBottom: '2rem', paddingBottom: '1rem', borderBottom: '1px solid #eee' }}>Privacy Policy</h1>
