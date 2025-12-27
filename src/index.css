@@ -130,6 +130,24 @@ a {
   .hero-actions {
     justify-content: center;
   }
+
+  /* Footer Responsiveness */
+  .footer-grid {
+    grid-template-columns: 1fr !important;
+    gap: 3rem !important;
+    text-align: center;
+  }
+
+  .footer-social {
+    justify-content: center;
+    margin-top: 2rem;
+  }
+}
+
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 /* Buttons */
