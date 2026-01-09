@@ -135,20 +135,20 @@ const Features = () => {
                 "Transfer Inventory Between Stores"
             ]
         },
-        {
-            title: "Vibita Whatsapp Chat & Marketing",
-            desc: "An all-in-one retention tool. Chat with customers directly via WhatsApp and convert abandoned carts with automated marketing campaigns.",
-            bg: "var(--feature-bg-pink)",
-            icon: MessageCircle,
-            image: imgWhatsapp,
-            accentColor: "#ec4899", // Using pink/green mix
-            featuresList: [
-                "Abandoned Cart Recovery Messages",
-                "Direct Customer Support Chat",
-                "Automated Order Updates via WhatsApp",
-                "Targeted Marketing Broadcasts"
-            ]
-        }
+        // {
+        //     title: "Vibita Whatsapp Chat & Marketing",
+        //     desc: "An all-in-one retention tool. Chat with customers directly via WhatsApp and convert abandoned carts with automated marketing campaigns.",
+        //     bg: "var(--feature-bg-pink)",
+        //     icon: MessageCircle,
+        //     image: imgWhatsapp,
+        //     accentColor: "#ec4899", // Using pink/green mix
+        //     featuresList: [
+        //         "Abandoned Cart Recovery Messages",
+        //         "Direct Customer Support Chat",
+        //         "Automated Order Updates via WhatsApp",
+        //         "Targeted Marketing Broadcasts"
+        //     ]
+        // }
     ];
 
     return (
