@@ -20,12 +20,12 @@ const Navbar = () => {
       icon: Package,
       color: '#f59e0b'
     },
-    {
-      name: 'Vibita Whatsapp Marketing',
-      desc: 'Chat & Marketing automation for recovery & loyalty.',
-      icon: MessageCircle,
-      color: '#22c55e'
-    }
+    // {
+    //   name: 'Vibita Whatsapp Marketing',
+    //   desc: 'Chat & Marketing automation for recovery & loyalty.',
+    //   icon: MessageCircle,
+    //   color: '#22c55e'
+    // }
   ];
 
   return (
