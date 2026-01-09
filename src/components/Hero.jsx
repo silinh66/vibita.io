@@ -38,65 +38,7 @@ const Hero = () => {
                             Trusted by 10,000+ Shopify Merchants
                         </div>
 
-                        <h1 style={{
-                            fontSize: 'clamp(2.5rem, 5vw, 4.5rem)',
-                            lineHeight: 1.1,
-                            fontWeight: 600,
-                            marginBottom: '1.5rem',
-                            letterSpacing: '-0.03em'
-                        }}>
-                            Empower Your <br />
-                            <span style={{ color: 'var(--text-dim)' }}>Shopify Store.</span>
-                        </h1>
 
-                        <p style={{
-                            fontSize: '1.2rem',
-                            color: 'var(--text-dim)',
-                            maxWidth: '550px',
-                            marginBottom: '3rem',
-                            lineHeight: 1.6,
-                            marginLeft: '0',
-                            marginRight: 'auto'
-                        }}>
-                            Supercharge your business with our suite of apps. Sync tracking data, manage multi-store inventory, and automate WhatsApp marketing—all in one place.
-                        </p>
-
-                        <div className="hero-actions" style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
-                            <motion.button
-                                className="btn btn-primary"
-                                whileHover={{ scale: 1.05 }}
-                                whileTap={{ scale: 0.95 }}
-                                style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}
-                            >
-                                Explore Apps <ArrowRight size={18} />
-                            </motion.button>
-
-                            <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginLeft: '1rem' }}>
-                                <div style={{ display: 'flex' }}>
-                                    {[1, 2, 3, 4, 5].map(i => <Star key={i} size={16} fill="#fff" stroke="none" />)}
-                                </div>
-                                <span style={{ fontSize: '0.9rem' }}>5.0 star rating on App Store</span>
-                            </div>
-                        </div>
-
-                        {/* Stats */}
-                        <div className="hero-stats" style={{
-                            marginTop: '5rem',
-                            display: 'flex',
-                            gap: '4rem',
-                            borderTop: '1px solid rgba(255,255,255,0.1)',
-                            paddingTop: '2rem'
-                        }}>
-                            {[
-                                { label: 'Orders Synced', value: '10M+' },
-                                { label: 'Revenue Recovered', value: '$500M+' }
-                            ].map(stat => (
-                                <div key={stat.label}>
-                                    <h3 style={{ fontSize: '2.5rem', fontWeight: 600 }}>{stat.value}</h3>
-                                    <p style={{ color: 'var(--text-dim)', fontSize: '0.9rem' }}>{stat.label}</p>
-                                </div>
-                            ))}
-                        </div>
                     </motion.div>
 
                     {/* Right Image */}
